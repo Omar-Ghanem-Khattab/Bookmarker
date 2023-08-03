@@ -53,19 +53,25 @@ function validateSiteURL() {
 
 
 function foundExistedItem() 
-{   
-for(var i = 0 ;i<bookmarksShelf.length;i++)
-{  
-if (bookmarksShelf[i].siteName.includes(siteNameInp.value) ) 
-{ 
-    // duplicated
-    document.getElementById("modalbutton").click();
-return false ;
- 
-} else{
-    return true;
-}
-}
+{
+    if (bookmarksShelf.length > 0) {
+        for(var i = 0 ;i<=bookmarksShelf.length;i++)
+        { 
+            
+            if (bookmarksShelf[i].siteName.includes(siteNameInp.value)) 
+            { 
+                // duplicated
+                document.getElementById("modalbutton").click();
+                return false;
+            
+            } else{
+                return true;
+            }
+        }
+    } else {
+        console.log('bookmark array has no value');
+        return true;
+    }
 }
 
 
