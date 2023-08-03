@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bookmarks</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Css/all.min.css" />
+    <link rel="stylesheet" href="Css/Style.css" />
+</head>
+
+<body>
+    <div class="container py-2">
+        <div class="title text-center sizing py-5">
+            <h1 class="d-inline position-relative">Bookmarker</h1>
+        </div>
+    </div>
+    <div class="container w-75">
+        <div class="bookmarkesForm py-5">
+            <h2 class="text-center pb-5">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div id="validation" class="position-relative">
+                <label for="siteName" class="mb-2"><span class="pe-1"><i class="fa-solid fa-book-bookmark"></i></span>
+                    Site Name</label>
+                <input type="text" class="form-control" id="siteName" placeholder="Bookmark Name" maxlength="12"
+                    oninput=" validatesiteName()" />
+            </div>
+            <div id="urlValidation" class="position-relative">
+            <label for="siteUrl" class="mt-4 mb-2"><span class="pe-1"><i class="fa-solid fa-link"></i></span> Site
+                URL</label>
+            <input type="text" class="form-control" id="siteUrl" placeholder="Website URL" oninput=" validateSiteURL()" />
+        </div>
+            <div class="container text-center mt-4">
+                <button onclick="submitsites()" class="btn btn-danger rezing">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container w-75 mx-auto my-3">
+        <div class="table-responsive">
+            <table class="table text-center text-light table-striped table-hover">
+                <thead>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tBody"></tbody>
+            </table>
+        </div>
+    </div>
+<!-- Button trigger modal -->
+<button type="button" id="modalbutton" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalLabel">Site Name or Url is not valid, Please follow the rules below :</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Site name must contain at least 3 characters. <br>
+            Site URL must be a valid one. <br>
+            Don`t repeat your site name / bookmarker.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

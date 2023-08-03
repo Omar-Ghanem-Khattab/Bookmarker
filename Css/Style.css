@@ -1,0 +1,88 @@
+body{
+    background-color: #F7ECDE;
+}
+
+.sizing{
+    font-family: 'Pacifico', cursive;
+    font-size: 3.2rem ;
+    font-weight: 500;
+}
+.bookmarkesForm{
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+}
+
+ h2 {
+    font-family: 'Righteous', cursive;
+     font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #ffea00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    background-clip: text;
+}
+
+.bookmarkesForm .btn {
+   padding-inline: 50px;
+}
+
+
+ h1::before{
+    content: "";
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        left: 0;
+        bottom: 14px;
+        background-color: #fec260;
+        transition: height 350ms;
+        z-index: -1;
+}
+ h1:hover::before{
+    height: 40%;
+    }
+
+    .valid::before {
+    content: "\f00c";
+    color: green;
+    font-size: 17px;
+    position: absolute;
+    right: 14px;
+    bottom: 8px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+ }
+
+
+ .invalid::before {
+    content: "\f057";
+    color: red;
+    font-size: 17px;
+    position: absolute;
+    right: 14px;
+    bottom: 8px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+ }
+
+ .urlvalid::before {
+    content: "\f00c";
+    color: green;
+    font-size: 17px;
+    position: absolute;
+    right: 14px;
+    bottom: 8px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+ }
+
+ .urlinvalid::before {
+    content: "\f057";
+    color: red;
+    font-size: 17px;
+    position: absolute;
+    right: 14px;
+    bottom: 8px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+ }
